@@ -1,0 +1,31 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+import { projects, getLocalizedProject } from "../data/projects";
+import type { Lang } from "../i18n/translations";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+{
+  projects.map((project) => {
+    const localized = getLocalizedProject(project, lang);
+    return (
+      <ProjectItem
+        title={localized.title}
+        year={localized.year}
+        category={localized.category}
+        description={localized.description}
+        tags={localized.tags}
+        images={project.images}
+        isMobileScreenshots={project.isMobileScreenshots}
+        logo={project.logo}
+        links={localized.links}
+        featured={project.featured}
+      />
+    );
+  })
+}

@@ -1,0 +1,210 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectList from "../../components/ProjectList.astro";
+import { t } from "../../i18n/translations";
+
+const lang = "es";
+---
+
+<Layout lang={lang} title="Rodrigo Viza | Ingeniero de Producto">
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-content reveal-on-scroll">
+      <h1 class="text-huge">Rodrigo Viza</h1>
+      <div class="hero-roles">
+        <span>{t(lang, "role1")}</span>
+        <span>/</span>
+        <span>{t(lang, "role2")}</span>
+        <span>/</span>
+        <span>{t(lang, "role3")}</span>
+      </div>
+    </div>
+    <div class="about-text reveal-on-scroll">
+      <span class="text-overline">{t(lang, "about_title")}</span>
+      <p>{t(lang, "bio")}</p>
+      <a href="/CV_RodrigoViza_2026.pdf" class="btn-outline">{t(lang, "download_cv")}</a>
+    </div>
+    <div class="scroll-indicator">Scroll</div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container section-padding">
+    <div class="reveal-on-scroll" style="margin-bottom: 4rem;">
+      <span class="text-overline">{t(lang, "projects_title")}</span>
+      <h2 class="text-large">{t(lang, "projects_heading")}</h2>
+    </div>
+
+    <div class="projects-list">
+      <ProjectList lang={lang} />
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="container section-padding skills-section">
+    <div class="skills-header reveal-on-scroll">
+      <span class="text-overline">{t(lang, "skills_title")}</span>
+      <h2 class="skills-subtitle">{t(lang, "skills_subtitle")}</h2>
+    </div>
+
+    <div class="skills-container reveal-on-scroll">
+      <div class="skills-row">
+        <span class="skill-chip backend">Java</span>
+        <span class="skill-chip backend">Spring Boot</span>
+        <span class="skill-chip backend">PostgreSQL</span>
+        <span class="skill-chip backend">Docker</span>
+        <span class="skill-chip backend">Microservices</span>
+      </div>
+      <div class="skills-row">
+        <span class="skill-chip mobile">Kotlin</span>
+        <span class="skill-chip mobile">Jetpack Compose</span>
+        <span class="skill-chip mobile">Clean Architecture</span>
+        <span class="skill-chip mobile">MVVM</span>
+      </div>
+      <div class="skills-row">
+        <span class="skill-chip frontend">React</span>
+        <span class="skill-chip frontend">Next.js</span>
+        <span class="skill-chip frontend">TypeScript</span>
+        <span class="skill-chip frontend">Astro</span>
+        <span class="skill-chip frontend">Tailwind CSS</span>
+      </div>
+      <div class="skills-row">
+        <span class="skill-chip tools">Git</span>
+        <span class="skill-chip tools">CI/CD</span>
+        <span class="skill-chip tools">Scrum</span>
+        <span class="skill-chip tools">Diseño de Sistemas</span>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .skills-section {
+      background: linear-gradient(180deg, #080808 0%, var(--bg-color) 100%);
+      padding: 4rem var(--spacing-container);
+    }
+
+    .skills-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .skills-subtitle {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 600;
+      color: var(--accent-neon);
+      text-shadow: var(--glow-neon);
+      margin-top: 0.5rem;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .skill-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.02);
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* Backend - Cyan */
+    .skill-chip.backend {
+      color: #00d9ff;
+      border: 1px solid #00d9ff;
+      box-shadow: 0 0 12px rgba(0, 217, 255, 0.25);
+      animation: pulseBackend 3s ease-in-out infinite;
+    }
+
+    /* Mobile - Purple */
+    .skill-chip.mobile {
+      color: #a855f7;
+      border: 1px solid #a855f7;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+      animation: pulseMobile 3s ease-in-out infinite;
+      animation-delay: 0.5s;
+    }
+
+    /* Frontend - Neon Green */
+    .skill-chip.frontend {
+      color: var(--accent-neon);
+      border: 1px solid var(--accent-neon);
+      box-shadow: 0 0 12px rgba(0, 255, 136, 0.25);
+      animation: pulseFrontend 3s ease-in-out infinite;
+      animation-delay: 1s;
+    }
+
+    /* Tools - Amber */
+    .skill-chip.tools {
+      color: #f59e0b;
+      border: 1px solid #f59e0b;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+      animation: pulseTools 3s ease-in-out infinite;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes pulseBackend {
+      0%,
+      100% {
+        box-shadow: 0 0 12px rgba(0, 217, 255, 0.25);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+      }
+    }
+
+    @keyframes pulseMobile {
+      0%,
+      100% {
+        box-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+      }
+    }
+
+    @keyframes pulseFrontend {
+      0%,
+      100% {
+        box-shadow: 0 0 12px rgba(0, 255, 136, 0.25);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+      }
+    }
+
+    @keyframes pulseTools {
+      0%,
+      100% {
+        box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .skills-section {
+        padding: 3rem var(--spacing-container);
+      }
+
+      .skill-chip {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</Layout>
