@@ -1,43 +1,80 @@
-# Astro Starter Kit: Minimal
+# 🚀 Rodrigo Viza | Portfolio
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+Portfolio personal moderno y minimalista de desarrollador, construido con Astro. Presenta proyectos destacados, stack tecnológico y múltiples formas de contacto.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Portfolio Preview](public/preview.png)
 
-## 🚀 Project Structure
+## ✨ Características
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Diseño Dark Mode Premium** - Estética oscura con acentos neon verdes
+- **Internacionalización (i18n)** - Español e Inglés con routing nativo de Astro
+- **Animaciones Interactivas** - Efectos de scroll reveal y hover con glow
+- **Carrusel de Imágenes** - Showcase de proyectos con navegación fluida
+- **Skills con Colores Dinámicos** - Chips animados con pulse por categoría
+- **Iconos Sociales de Marca** - WhatsApp, LinkedIn, GitHub, Email, X con colores oficiales
+- **Totalmente Responsive** - Optimizado para móvil, tablet y desktop
+- **Rendimiento Optimizado** - Carga rápida con lazy loading de imágenes
+
+## 🛠️ Stack Tecnológico
+
+- **Framework**: [Astro](https://astro.build/)
+- **Estilos**: CSS Variables + Animaciones nativas
+- **Fuentes**: Manrope (Headings) + Inter (Body) via Google Fonts
+- **Hosting**: Listo para Vercel/Netlify
+
+## 📁 Estructura del Proyecto
 
 ```text
 /
 ├── public/
+│   └── projects/          # Imágenes de proyectos
 ├── src/
+│   ├── components/
+│   │   ├── ProjectItem.astro    # Tarjeta de proyecto con carrusel
+│   │   └── ProjectList.astro    # Lista de proyectos
+│   ├── data/
+│   │   └── projects.ts          # Datos de proyectos
+│   ├── i18n/
+│   │   └── translations.ts      # Traducciones ES/EN
+│   ├── layouts/
+│   │   └── Layout.astro         # Layout principal con header, footer y estilos globales
 │   └── pages/
-│       └── index.astro
+│       ├── index.astro          # Redirect
+│       ├── en/index.astro       # Página en Inglés
+│       └── es/index.astro       # Página en Español
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🎨 Proyectos Destacados
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+| Proyecto              | Descripción                         | Tecnologías                       |
+| --------------------- | ----------------------------------- | --------------------------------- |
+| **SneakerShooes**     | E-commerce de zapatillas full-stack | Next.js, TypeScript, React        |
+| **AQP Explorer**      | App móvil de turismo offline-first  | Kotlin, Jetpack Compose, Firebase |
+| **LEXIA**             | Plataforma EdTech con IA para niños | Next.js, Python, FastAPI          |
+| **GlassFish AppShop** | Sistema empresarial Java EE         | Java, Jakarta EE, JSP             |
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🧞 Comandos
 
-## 🧞 Commands
+| Comando        | Acción                               |
+| -------------- | ------------------------------------ |
+| `pnpm install` | Instala dependencias                 |
+| `pnpm dev`     | Inicia servidor en `localhost:4321`  |
+| `pnpm build`   | Compila para producción en `./dist/` |
+| `pnpm preview` | Preview de la build                  |
 
-All commands are run from the root of the project, from a terminal:
+## 📬 Contacto
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- **Email**: rodrigoestefanovizacuti@gmail.com
+- **Teléfono**: +51 959 619 405
+- **LinkedIn**: [rodrigoviza](https://www.linkedin.com/in/rodrigoviza/)
+- **GitHub**: [imlosing07](https://github.com/imlosing07)
+- **X/Twitter**: [RodrigoViza4](https://x.com/RodrigoViza4)
 
-## 👀 Want to learn more?
+## 📄 Licencia
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+© 2025 Rodrigo Viza. Todos los derechos reservados.
+
+---
+
+Hecho con ❤️ y [Astro](https://astro.build)
